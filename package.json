@@ -18,7 +18,7 @@
     "type": "git",
     "url": "https://github.com/yokochen222/yo-schema-form"
   },
-  "homepage": "https://github.com/yokochen222/yo-schema-form",
+  "homepage": "https://yokochen222.github.io/yo-schema-form/",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --dest docs",
