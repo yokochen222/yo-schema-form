@@ -1,7 +1,7 @@
 {
   "name": "yo-schema-form",
   "version": "1.0.0",
-  "private": true,
+  "private": false,
   "main": "./lib/yo-schema-form.umd.min.js",
   "author": {
     "name": "YokoChen",
