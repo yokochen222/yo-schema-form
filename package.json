@@ -21,7 +21,7 @@
   "homepage": "https://github.com/yokochen222/yo-schema-form",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --dest doc",
+    "build": "vue-cli-service build --dest docs",
     "lint": "vue-cli-service lint",
     "lib": "vue-cli-service build --target lib --dest lib --name 'yo-schema-form' './src/packages/yo-schema-form/index.js'"
   },
