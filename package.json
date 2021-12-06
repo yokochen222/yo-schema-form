@@ -3,6 +3,22 @@
   "version": "1.0.0",
   "private": true,
   "main": "./lib/yo-schema-form.umd.min.js",
+  "author": {
+    "name": "YokoChen",
+    "email": "8144064@qq.com"
+  },
+  "keywords": [
+    "yo-schema-form",
+    "vue-schema",
+    "vue-schema-form",
+    "vue-schema-json-form",
+    "vue-schema-object-form"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yokochen222/yo-schema-form"
+  },
+  "homepage": "https://github.com/yokochen222/yo-schema-form",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --dest doc",
