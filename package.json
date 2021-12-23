@@ -1,6 +1,6 @@
 {
   "name": "yo-schema-form",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "private": false,
   "main": "./lib/yo-schema-form.umd.min.js",
   "author": {
