@@ -12,7 +12,7 @@
 
 - 数据自动修正（如`v-model` 值与`schema`限定类型不一致，则自动根据`schema`声明类型进行修复）
 
-[![oD2l38.md.png](https://s4.ax1x.com/2021/12/05/oD2l38.md.png)](https://imgtu.com/i/oD2l38)
+[![oD2l38.md.png](https://s4.ax1x.com/2021/12/05/oD2l38.md.png)](https://s4.ax1x.com/2021/12/05/oD2l38.md.png)
 
 **DEMO **
 
@@ -242,3 +242,33 @@ provide: {
 inject:['yoschemaform']
 ```
 
+### 更新 1.0.3
+- 新增内置下拉组件 YoSchemaSelect
+- 新增 array长度限制 arrayMaxItems
+
+> YoSchemaSelect
+> 通过 配置 schmea attrs 属性配置 options选项
+```js
+{
+  select: {
+    label: '下拉选框',
+    type: 'number',
+    component: 'YoSchemaSelect',
+    attrs: {
+      placeholder: "",
+      options: [{label: '下拉选项1', value: 1}, {label: '下拉选项2', value: 2}]
+    }
+  }
+}
+```
+> 通过schema配置 arrayMaxItems 限制array成员数量
+```js
+{
+  jobs: {
+    type: 'array',
+    attrs: {
+      arrayMaxItems: 3
+    }
+  }
+}
+```

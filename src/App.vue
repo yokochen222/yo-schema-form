@@ -24,7 +24,7 @@ export default {
       values: {
         ar: "23",
         name: "张三",
-        stacks: [{ id: 12, name: "PHP" }],
+        stacks: [{ id: 12, name: "PHP", state: "1" }],
       },
       schemas: {
         name: {
@@ -54,9 +54,24 @@ export default {
             { min: 18, message: "禁止雇佣祖国的花朵🌺", type: "number" },
           ],
         },
+        select: {
+          label: "下拉选框",
+          type: "number",
+          component: "YoSchemaSelect",
+          attrs: {
+            placeholder: "",
+            options: [
+              { label: "下拉选项1", value: 0 },
+              { label: "下拉选项2", value: 1 },
+            ],
+          },
+        },
         stacks: {
           type: "array",
           label: "技术栈",
+          attrs: {
+            arrayMaxItems: 2,
+          },
           items: {
             type: "object",
             label: "技术栈",

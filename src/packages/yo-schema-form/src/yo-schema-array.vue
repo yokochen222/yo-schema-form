@@ -46,7 +46,7 @@
         ></YoSchemaFormItem>
       </template>
     </template>
-    <div class="yo-array-plus-btn">
+    <div v-if="canAddItem" class="yo-array-plus-btn">
       <el-button @click="handleAdd" icon="el-icon-plus">追加</el-button>
     </div>
   </div>
@@ -68,6 +68,10 @@ export default {
       type: Object,
       required: true,
     },
+    arrayMaxItems: {
+      type: Number,
+      default: 0,
+    },
   },
   computed: {
     formatValue: {
@@ -77,6 +81,15 @@ export default {
       set(val) {
         this.$emit("input", val);
       },
+    },
+    canAddItem() {
+      let flag = true;
+      if (this.arrayMaxItems == 0) {
+        flag = true;
+      } else if (this.value.length >= this.arrayMaxItems) {
+        flag = false;
+      }
+      return flag;
     },
   },
   methods: {
@@ -104,6 +117,10 @@ export default {
     },
     // 新增数组项
     handleAdd() {
+      // 判断是否
+      if (!this.canAddItem) {
+        return;
+      }
       const defaultValue = BuildDefaultValue(this.schema.items);
       this.value.push(defaultValue);
       function BuildDefaultValue(schema) {
